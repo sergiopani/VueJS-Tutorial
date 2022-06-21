@@ -1,17 +1,19 @@
 <template>
   <h1>Vue JS</h1>
-  <CarComposition />
-  <hr/>
-  <CarOptions />
+  <Car :power="power"/>
 </template>
 
 <script>
-import CarComposition from "./components/CarComposition";
-import CarOptions from "./components/CarOptions";
+import Car from "./components/Car";
 export default {
   components: {
-    CarComposition,
-    CarOptions,
+    Car,
+  },
+  setup() {
+    let power = 30;
+    return {
+      power,
+    };
   },
 };
 </script>
